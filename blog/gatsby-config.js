@@ -17,8 +17,13 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `images`,
-        path: `${__dirname}/src/images`,
+
+        //Contenful Log In Keys
+        spaceID:`pmqu1n7n6ep8`,
+        accessToken:`vCXdRlIWgrL7kt-FPb_65RGlpDrcsOqBTzwSeQLrajg`,
+
+        //name: `images`,
+        //path: `${__dirname}/src/images`,
       },
     },
     `gatsby-transformer-sharp`,
