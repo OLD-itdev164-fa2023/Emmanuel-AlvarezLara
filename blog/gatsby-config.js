@@ -8,7 +8,7 @@ module.exports = {
     contact: {
       name:'Emmanuel',
       company:'Blong Inc',
-      address:'160 W Crawford Ave Milwaukee Wi. 53207',
+      address:'160 W Crawford Ave Milwaukee Wi. 53207git add',
 
     }
   },
