@@ -8,15 +8,27 @@ module.exports = {
     contact: {
       name:'Emmanuel',
       company:'Blong Inc',
-      address:'160 W Crawford Ave Milwaukee Wi. 53207',
+      address:'160 W Crawford Ave Milwaukee Wi. 53207git add',
 
     }
   },
   plugins: [
+
+    `gatsby-plugin-react-helmet`,
     `gatsby-plugin-image`,
+    {
+//Contenful Log In Keys
+resolve:`gatsby-source-contentful`,
+options:{
+  spaceId:`pmqu1n7n6ep8`,
+  accessToken:`vCXdRlIWgrL7kt-FPb_65RGlpDrcsOqBTzwSeQLrajg`,
+} 
+    },
+
     {
       resolve: `gatsby-source-filesystem`,
       options: {
+
         name: `images`,
         path: `${__dirname}/src/images`,
       },
