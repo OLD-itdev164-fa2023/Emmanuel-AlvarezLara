@@ -13,17 +13,24 @@ module.exports = {
     }
   },
   plugins: [
+
+    `gatsby-plugin-react-helmet`,
     `gatsby-plugin-image`,
+    {
+//Contenful Log In Keys
+resolve:`gatsby-source-contentful`,
+options:{
+  spaceId:`pmqu1n7n6ep8`,
+  accessToken:`vCXdRlIWgrL7kt-FPb_65RGlpDrcsOqBTzwSeQLrajg`,
+} 
+    },
+
     {
       resolve: `gatsby-source-filesystem`,
       options: {
 
-        //Contenful Log In Keys
-        spaceID:`pmqu1n7n6ep8`,
-        accessToken:`vCXdRlIWgrL7kt-FPb_65RGlpDrcsOqBTzwSeQLrajg`,
-
-        //name: `images`,
-        //path: `${__dirname}/src/images`,
+        name: `images`,
+        path: `${__dirname}/src/images`,
       },
     },
     `gatsby-transformer-sharp`,
