@@ -20,8 +20,8 @@ module.exports = {
 //Contenful Log In Keys
 resolve:`gatsby-source-contentful`,
 options:{
-  spaceId:`pmqu1n7n6ep8`,
-  accessToken:`vCXdRlIWgrL7kt-FPb_65RGlpDrcsOqBTzwSeQLrajg`,
+  spaceId:`{process.env.SPACE_ID}`,
+  accessToken:`{process.env.ACCESS_TOKEN}`,
 } 
     },
 
