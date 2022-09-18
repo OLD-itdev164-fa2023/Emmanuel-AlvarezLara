@@ -36,11 +36,10 @@ resolve:`gatsby-source-contentful`,
 options:{
   spaceId:`${process.env.SPACE_ID}`,
   accessToken:`${process.env.ACCESS_TOKEN}`,
-  //spaceId:`pmqu1n7n6ep8`,
-  //accessToken:`vCXdRlIWgrL7kt-FPb_65RGlpDrcsOqBTzwSeQLrajg`,
+  
 } 
     },
-    //`gatsby-trasformer-remark`,
+    `gatsby-trasformer-remark`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
