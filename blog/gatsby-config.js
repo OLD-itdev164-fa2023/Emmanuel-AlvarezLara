@@ -1,3 +1,9 @@
+
+require(`dotenv`).config({
+  path: `.env.${process.env.NODE_ENV}`
+})
+
+
 module.exports = {
   siteMetadata: {
     title: `Gatsby Blog Emma`,
@@ -13,28 +19,30 @@ module.exports = {
     }
   },
   plugins: [
-
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-image`,
     {
+
+resolve:`gatsby-source-filesystem`,
+options: {
+  name: `images`,
+  path:`${__dirname}/src/images`,
+},
+    },
+
+  {    
 //Contenful Log In Keys
 resolve:`gatsby-source-contentful`,
 options:{
-  spaceId:`pmqu1n7n6ep8`,
-  accessToken:`vCXdRlIWgrL7kt-FPb_65RGlpDrcsOqBTzwSeQLrajg`,
+  spaceId:`${process.env.SPACE_ID}`,
+  accessToken:`${process.env.ACCESS_TOKEN}`,
+  
 } 
     },
-
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-
-        name: `images`,
-        path: `${__dirname}/src/images`,
-      },
-    },
+   `gatsby-transformer-remark`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
+   
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
