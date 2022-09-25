@@ -14,7 +14,7 @@ const BlogPost = ({ data }) => {
 }
 
 export default BlogPost;
-
+//Activity 3 update
 export const pageQuery = graphql`
 query blogPostQuery($slug: String!) {
     contentfulBlogPost(slug: {eq: $slug}){
